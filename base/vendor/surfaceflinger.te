@@ -203,3 +203,7 @@ allow surfaceflinger teei_client_device:chr_file rw_file_perms;
 
 # Purpose: Vendor Firmwares
 allow surfaceflinger vendor_fw_file:dir search;
+
+# Allow SurfaceFlinger to read HWC & DSI related properties
+get_prop(surfaceflinger, vendor_mtk_hwc_dsi_switch_prop)
+get_prop(surfaceflinger, vendor_mtk_hwc_buffer_hint_prop)
