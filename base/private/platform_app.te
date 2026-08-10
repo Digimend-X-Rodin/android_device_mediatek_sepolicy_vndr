@@ -6,6 +6,7 @@
 # Operation : hs_xiangxu
 # Purpose : [ALPS01782971]Settings need read&write to system_app_data_file
 # Package: com.android.settings
+allow platform_app system_app_data_file:dir getattr;
 allow platform_app system_app_data_file:file rw_file_perms;
 
 # Date : 2015/09/06
@@ -151,3 +152,8 @@ get_prop(platform_app, system_mtk_common_data_prop)
 # VoNR : 2021/11/26
 # Purpose : allow to setprop persist.vendor.dbg.vonr_ui_ovr
 set_prop(platform_app,system_mtk_dbg_ims_prop);
+
+allow platform_app app_data_file:lnk_file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
+allow platform_app app_data_file:file { getattr map execute execute_no_trans };
+allow platform_app privapp_data_file:file { read getattr map execute open };
+allow platform_app privapp_data_file:dir { read getattr execute open search };

@@ -187,3 +187,10 @@ allow init {
 
 # Allow init to signal usb init is done
 allow init sysfs_usb_nonplat:file rw_file_perms;
+
+# Allow init to execute the HAL binary and transition
+allow init mtk_hal_camera_exec:file { read getattr map execute open };
+allow init mtk_hal_camera:process transition;
+dontaudit init mtk_hal_camera:process noatsecure;
+allow init mtk_hal_camera:process { siginh rlimitinh };
+type_transition init mtk_hal_camera_exec:process mtk_hal_camera;

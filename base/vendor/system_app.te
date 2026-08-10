@@ -205,5 +205,8 @@ get_prop(system_app, vendor_mtk_vinr_prop)
 allow system_app mtk_audiohal_data_file:dir create_dir_perms;
 allow system_app mtk_audiohal_data_file:file create_file_perms;
 
+get_prop(system_app, vendor_mtk_audio_prop)
 
 hal_client_domain(system_app, hal_fingerprint)
+
+allow system_app hal_camera_service:service_manager find;

@@ -24,6 +24,7 @@ allow bluetooth mtk_hal_bluetooth_audio_hwservice:hwservice_manager find;
 allow bluetooth proc_btdbg:file rw_file_perms;
 allow bluetooth kernel:process setsched;
 
+get_prop(bluetooth, vendor_mtk_audio_prop)
 get_prop(bluetooth, vendor_mtk_bt_perf_prop)
 
 # Date : 2021/09/07
