@@ -207,3 +207,5 @@ allow surfaceflinger vendor_fw_file:dir search;
 # Allow SurfaceFlinger to read HWC & DSI related properties
 get_prop(surfaceflinger, vendor_mtk_hwc_dsi_switch_prop)
 get_prop(surfaceflinger, vendor_mtk_hwc_buffer_hint_prop)
+
+allow surfaceflinger mtk_hal_mali_platform_default_service:service_manager find;
