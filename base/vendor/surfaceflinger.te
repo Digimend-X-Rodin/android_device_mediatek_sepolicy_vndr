@@ -204,3 +204,5 @@ allow surfaceflinger teei_client_device:chr_file rw_file_perms;
 get_prop(surfaceflinger, vendor_mtk_hwc_dsi_switch_prop)
 get_prop(surfaceflinger, vendor_mtk_hwc_buffer_hint_prop)
 get_prop(surfaceflinger, vendor_mtk_debug_sf_kickidle_prop)
+
+allow surfaceflinger mtk_hal_mali_platform_default_service:service_manager find;

@@ -409,3 +409,5 @@ allow mediaserver widevine_drv_device:chr_file rw_file_perms_no_map;
 
 # Purpose: Allow mediaserver to get MML PQ support
 get_prop(mediaserver, vendor_mtk_mml_support_prop)
+
+allow mediaserver mtk_hal_mali_platform_default_service:service_manager find;
