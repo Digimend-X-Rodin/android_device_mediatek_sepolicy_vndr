@@ -14,6 +14,8 @@ type conn_scp_device, dev_type;
 type wmtdetect_device, dev_type;
 type wmtWifi_device, dev_type;
 type stpbt_device, dev_type;
+type connsys_bt_state_device, dev_type;
+type connsys_wifi_device, dev_type;
 type fw_log_bt_device, dev_type;
 type stpant_device, dev_type;
 type fm_device, dev_type, mlstrustedobject;
@@ -278,6 +280,7 @@ type rotfw_block_device, dev_type;
 type ise_block_device, dev_type;
 type dmabuf_mtk_slc_heap_device, dev_type, dmabuf_heap_device_type;
 type dmabuf_mtk_sapu_page_device, dev_type, dmabuf_heap_device_type;
+type emiupfw_block_device, dev_type;
 
 ##########################
 # Sensor common Devices Start
@@ -395,3 +398,6 @@ type ccci_mdmonitor_device, dev_type;
 # Operator: S migration
 # Purpose: Add permission for vilte
 type ccci_vts_device, dev_type;
+
+# Purpose: Add permission for pkvm TZ
+type pkvm_mtk_tz_device, dev_type;
