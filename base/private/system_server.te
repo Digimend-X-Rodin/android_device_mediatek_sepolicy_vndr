@@ -218,3 +218,7 @@ get_prop(system_server, system_mtk_common_data_prop)
 # Support system server binder call MAGT service
 binder_call(system_server, magt)
 allow system_server magt_service:service_manager find;
+
+# Date:2026/02/11
+# Allow access to MTK battery nodes
+allow system_server proc_battery_cmd:dir search;

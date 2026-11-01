@@ -22,3 +22,7 @@ type sysfs_vbus, fs_type, sysfs_type;
 type sysfs_pmu, fs_type, sysfs_type;
 
 type sysfs_ccci, fs_type, sysfs_type;
+
+# Date : 2026/02/11
+# Allow access to MTK battery nodes
+type proc_battery_cmd, fs_type, proc_type;

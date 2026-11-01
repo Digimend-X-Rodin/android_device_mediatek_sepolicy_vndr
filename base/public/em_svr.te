@@ -5,3 +5,7 @@
 # Type Declaration
 # ==============================================
 type em_svr, domain;
+
+# Allow access to MTK battery nodes
+allow em_svr proc_battery_cmd:dir search;
+allow em_svr proc_battery_cmd:file create_file_perms;
